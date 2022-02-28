@@ -11,7 +11,8 @@ alias cc='clear && cd'
 alias la='ls -a'
 
 alias ports='netstat -tulanp'
-alias diskspace="du -S | sort -n -r |more"
+alias sizeof='du -sh'
+alias diskspace='du -S | sort -n -r |more'
 alias back='cd $OLDPWD'
 
 # Functions
