@@ -6,6 +6,7 @@ Notable Features
 - `md` is a mkdir with a cd into it after creation
 - `up <optional:int>` moves you up 1 directory by default or uses the int you pass it 
 - `back` returns you to your previous working directory
+- `sizeof` uses du to human readable size of the file you point it to 
 
 ### `upgrade_nano.sh` 
 Uses [Scopatz's](https://github.com/scopatz/nanorc) installer to add more language highlighting to nano
