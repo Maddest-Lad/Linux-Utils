@@ -15,15 +15,9 @@ alias diskspace="du -S | sort -n -r |more"
 alias back='cd $OLDPWD'
 
 # Functions
-
-# mkdir + cd
-md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"; } 
-
-# ascend directories in style
-up() {cd $(eval printf '../'%.0s {1..$1}) && pwd;}
-
-# sudo the last command
-s() { sudo $(history -p '!!')}
+md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";}
+up() { cd $(eval printf '../'%.0s {1..$1}) && pwd;}
+s() { sudo $(history -p '!!');}
 
 # History File Config
 shopt -s histappend
