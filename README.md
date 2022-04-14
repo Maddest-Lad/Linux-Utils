@@ -2,8 +2,7 @@
 More or less a standard linux bashrc with a few useful aliases & functions added at the top - Colors are force-enabled cause I like it that way.
 
 ### `.path`
-file to house all of my `export PATH=$HOME.../someplace...$PATH`'s so that they're easily accessible, and I can append to the file without concern for organization.
-- `
+file to house all of my export path and echo eval commands so that they're easily accessible and I can append to the file without concern for organization
 
 ### `.bash_aliases`
 
