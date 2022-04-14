@@ -5,10 +5,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Functions
-md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";}
-up() { cd $(eval printf '../'%.0s {1..$1}) && pwd;}
-s() { sudo $(history -p '!!');}
+# Load Path
+if [ -f ~/.path ]; then
+    . ~/.path
+fi
 
 # History File Config
 shopt -s histappend
