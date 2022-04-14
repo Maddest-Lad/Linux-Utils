@@ -1,19 +1,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# Alias definitions.
-alias src='source ~/.bashrc' # Source Me
-alias alia='nano ~/.bashrc' # Edit Me
-
-# Clean Terminal Navigation  
-alias lc='clear && ls'
-alias cc='clear && cd'
-alias la='ls -a'
-
-alias ports='netstat -tulanp'
-alias sizeof='du -sh'
-alias diskspace='du -S | sort -n -r |more'
-alias back='cd $OLDPWD'
+# Load Aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 # Functions
 md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";}
