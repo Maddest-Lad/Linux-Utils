@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Backup Old Config Files, Allow cp to Silently Fail if They Don't Exist
-mkdir ~/.old-config
+mkdir ~/.old
 cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
 cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
 
