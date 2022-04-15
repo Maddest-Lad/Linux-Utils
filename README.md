@@ -1,4 +1,4 @@
-### Set Everything Up
+### Install Command
 `git clone https://github.com/SamHarris2020/Linux-Utils.git && chmod +x Linux-Utils/installer.sh && Linux-Utils/installer.sh`
 
 ### `.bashrc`
