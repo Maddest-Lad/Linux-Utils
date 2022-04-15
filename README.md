@@ -27,7 +27,7 @@ file to house all of my export path and echo eval commands so that they're easil
 #### History Based
 - `hs <int:n>` prints the last n lines of the history file
 - `replay <int:n>` runs the last n lines of your history file
-- `save <int:n> <str:name>` saves the last n lines of your history file as a shell script   
+- NOT WORKING `save <int:n> <str:name>` saves the last n lines of your history file as a shell script   
 
 ### Other Things
 `upgrade_nano.sh` - Uses [Scopatz's](https://github.com/scopatz/nanorc) installer to add more language highlighting to nano
