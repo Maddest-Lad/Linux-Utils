@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# Root EUID is 0 By Convention, Keep in Mind Not Always
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit
-fi
-
 # Backup Old Config Files, Allow cp to Silently Fail if They Don't Exist
 mkdir ~/.old-config
 cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
@@ -39,4 +33,4 @@ source ~/.bashrc
 source ~/.bash_aliases
 
 # Run Any Other Box Setup Commands I Like
-sudo ./upgrade_nano.sh
+./upgrade_nano.sh
