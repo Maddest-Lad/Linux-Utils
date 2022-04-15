@@ -13,7 +13,7 @@ alias back='cd $OLDPWD'
 # Useful Commands  
 s() { sudo $(history -p '!!');}
 alias ports='netstat -tulanp'
-alias sizeof='du -sh
+alias sizeof='du -sh'
 alias diskspace='du -S | sort -n -r |more'
 
 # Path Utils
@@ -22,7 +22,7 @@ function path {
     then # No Args, Add Current Directory
       echo "export PATH=\$PATH:$(pwd):\$PATH" >> ~/.path
     else
-      echo "export PATH=\$PATH:$1:\$PATH" >> ~/.path'
+      echo "export PATH=\$PATH:$1:\$PATH" >> ~/.path
   fi
   source ~/.bashrc
 }
