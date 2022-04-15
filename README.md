@@ -1,5 +1,5 @@
 ### Install Command
-`git clone https://github.com/SamHarris2020/Linux-Utils.git && chmod +x Linux-Utils/installer.sh && Linux-Utils/installer.sh`
+`git clone https://github.com/SamHarris2020/Linux-Utils.git && chmod +x Linux-Utils/install.sh && Linux-Utils/install.sh`
 
 ### `.bashrc`
 More or less a standard linux bashrc with a few useful aliases & functions added at the top - Colors are force-enabled cause I like it that way.
