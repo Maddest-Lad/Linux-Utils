@@ -6,7 +6,7 @@ cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
 cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
 
 # Use Correct Bashrc File Depending on OS
-distro="lsb_release -is" # "Ubuntu" "Kali"
+distro="$(lsb_release -is)" # "Ubuntu" "Kali"
 
 if [$distro = "Ubuntu"]
   then cp bashrc-ubuntu ~/.bashrc
