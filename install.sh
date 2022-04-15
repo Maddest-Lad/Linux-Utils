@@ -6,11 +6,11 @@ cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
 cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
 
 echo "Which Distro Are You Installing On? "
-select yn in "Ubuntu" "Kali" "Generic Install" "Quit"; do
+select yn in "Ubuntu" "Kali" "Generic" "Quit"; do
   case $yn in
     Ubuntu ) cp bashrc-ubuntu ~/.bashrc; break;;
     Kali ) cp bashrc-kali ~/.bashrc; break;;
-    Generic Install ) cp bashrc-ubuntu ~/.bashrc; break;;
+    Generic ) cp bashrc-ubuntu ~/.bashrc; break;;
     Quit ) exit;;
   esac
 done
