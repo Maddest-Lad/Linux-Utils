@@ -15,29 +15,28 @@ cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
 distro="lsb_release -is" # "Ubuntu" "Kali"
 
 if [$distro = "Ubuntu"]
-  then mv .bashrc-ubuntu ~/.bashrc
+  then cp bashrc-ubuntu ~/.bashrc
 
   elif [$distro = "Kali"]
-    then mv bashrc-kali ~/.bashrc
+    then cp bashrc-kali ~/.bashrc
 
   else
     # The Ubuntu Config is the Most Generic, So It Ought to Work on Most Systems
     echo "$distro Not Recognised, Override? (Yes/No)? "
     select yn in "Yes" "No"; do
       case $yn in
-        Yes ) mv .bashrc-ubuntu ~/.bashrc; break;;
+        Yes ) cp bashrc-ubuntu ~/.bashrc; break;;
         No ) exit;;
       esac
     done
-  exit
 fi
 
 # Setup Aliases
-mv bash_aliases ~/.bash_aliases
+cp bash_aliases ~/.bash_aliases
 
 # Source Everything
 source ~/.bashrc
 source ~/.bash_aliases
 
 # Run Any Other Box Setup Commands I Like
-./upgrade_nano.sh
+sudo ./upgrade_nano.sh
