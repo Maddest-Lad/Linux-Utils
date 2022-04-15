@@ -34,3 +34,10 @@ fi
 
 # Setup Aliases
 mv bash_aliases ~/.bash_aliases
+
+# Source Everything
+source ~/.bashrc
+source ~/.bash_aliases
+
+# Run Any Other Box Setup Commands I Like
+./upgrade_nano.sh
