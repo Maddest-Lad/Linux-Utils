@@ -6,15 +6,20 @@ alias alia='nano ~/.bashrc' # Edit Me
 alias lc='clear && ls'
 alias cc='clear && cd'
 alias la='ls -a'
-md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";}
-up() { cd $(eval printf '../'%.0s {1..$1}) && pwd;}
+function md { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!";}
+function up { cd $(eval printf '../'%.0s {1..$1}) && pwd;}
 alias back='cd $OLDPWD'
 
 # Useful Commands  
-s() { sudo $(history -p '!!');}
+function s { sudo $(history -p '!!');}
 alias ports='netstat -tulanp'
 alias sizeof='du -sh'
 alias diskspace='du -S | sort -n -r |more'
+
+# History Utils
+function hs { history $1 | cut -c 8- }
+function replay { history $1 | cut -c 8- > test.sh && chmod +x test.sh && ./test.sh && rm test.sh }
+function save { history $1 | cut -c 8- > "$2.sh" }
 
 # Path Utils
 function path {
@@ -26,9 +31,3 @@ function path {
   fi
   source ~/.bashrc
 }
-
-
-
-
-
-
