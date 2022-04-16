@@ -15,6 +15,7 @@ function s { sudo $(history -p '!!');}
 alias ports='netstat -tulanp'
 alias sizeof='du -sh'
 alias diskspace='du -S | sort -n -r |more'
+alias whereis='sudo find / -name'
 
 # History Utils
 function hs { history $1 | cut -c 8-;}
