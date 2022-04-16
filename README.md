@@ -26,7 +26,7 @@ file to house all of my export path and echo eval commands so that they're easil
 - `ports` uses netstat to give you every currently open port 
 - `sizeof <optional:file/dir>` displays the size of a file or directory, if given no arguments, runs on current dir
 - `diskspace` gives you a sorted list of who's taking up the most diskspace
-- `whereis <search term, * works>` wrapper for sudo find name cause it has weird formatting 
+- `whereis <string - * works>` wrapper for sudo find name cause it has weird formatting 
 
 #### History Based
 - `hs <int:n>` prints the last n lines of the history file
