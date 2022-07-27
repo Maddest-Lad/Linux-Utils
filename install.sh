@@ -4,6 +4,7 @@
 mkdir ~/.old
 cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
 cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
+cd Linux-Utils
 
 echo "Which Distro Are You Installing On? "
 select yn in "Ubuntu" "Kali" "Generic" "Quit"; do
