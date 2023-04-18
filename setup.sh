@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Backup Old Config Files, Allow cp to Silently Fail if They Don't Exist
-mkdir ~/.old
-cp ~/.bashrc ~/.old/.bashrc 2>/dev/null
-cp ~/.bash_aliases  ~/.old/.bash_aliases 2>/dev/null
+mkdir -p ~/.old
+cp ~/.bashrc ~/.old/bashrc 2>/dev/null
+cp ~/.bash_aliases  ~/.old/bash_aliases 2>/dev/null
 
 # Enter Into Setup Folder
 cd Linux-Utils
-cp bashrc-ubuntu ~/.bashrc
+cp bashrc ~/.bashrc
 
 # Setup Aliases
 cp bash_aliases ~/.bash_aliases
