@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# Create Working Directory
-mkdir -p /DNS
+# This Script Should be Placed in $HOME/DNS
 
 # Run in the Right Place
-cd /home/$USER/DNS
+cd $HOME/DNS
 
 USERNAME=""
 PASSWORD=""
