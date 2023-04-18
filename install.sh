@@ -19,3 +19,10 @@ done
 # Setup Aliases
 cp bash_aliases ~/.bash_aliases
 source ~/.bashrc
+
+# Upgrade Nano
+chmod +x upgrade_nano.sh && ./upgrade_nano.sh
+
+# Setup Base Packages
+sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get install -y ssh mdadm htop tree net-tools git git-lfs ffmpeg python3 python3-pip virtualenv
