@@ -12,15 +12,11 @@ alias back='cd $OLDPWD'
 
 # Useful Commands
 function s { sudo $(history -p '!!');}
-alias ports='netstat -tulanp'
+alias ports='netstat -tanp'
 alias sizeof='du -sh'
 alias diskspace='du -S | sort -n -r |more'
 alias whereis='sudo find / -name'
-
-# History Utils
-function hs { history $1 | cut -c 8-;}
-function replay { history $1 | cut -c 8- > temp.sh && chmod +x temp.sh && ./temp.sh && rm temp.sh;}
-#function save { history $1 | cut -c 8- > "$2.sh";} # WIP
+alias smi='gpustat --show-power -i 1 --no-header'
 
 # Path Utils
 function path {
@@ -31,4 +27,15 @@ function path {
       echo "export PATH=\$PATH:$1:\$PATH" >> ~/.path
   fi
   source ~/.bashrc
+}
+
+# Tmux Utils
+function at {
+  if [ -z "$1" ]
+    then
+        tmux
+        tmux rename-session "${PWD##*/}"
+    else
+        tmux attach -t $1
+  fi
 }
