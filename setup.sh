@@ -20,7 +20,7 @@ chmod +x upgrade_nano.sh && ./upgrade_nano.sh
 
 # Setup Base Packages
 sudo apt-get update -y && sudo apt-get upgrade -y
-sudo apt-get install -y ssh mdadm htop tree net-tools git-lfs ffmpeg python3 python3-pip virtualenv
+sudo apt-get install -y ssh mdadm htop tree net-tools git-lfs ffmpeg python3 python3-pip virtualenv golang-go
 
 # Return to parent directory
 cd ..
